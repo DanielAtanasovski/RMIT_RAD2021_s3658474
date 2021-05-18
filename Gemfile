@@ -25,8 +25,11 @@ gem 'font-awesome-rails', '~> 4.7'
 gem 'bcrypt', '~> 3.1'
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.4.1'
+<<<<<<< HEAD
 # aws
 gem 'aws-sdk', '~> 3'
+=======
+>>>>>>> 34dc9c1... Popular and Collections
 
 
 # REQUIRED FOR DEV (STANDARD TEMPLATE)
@@ -35,10 +38,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :production do
 <<<<<<< HEAD
+<<<<<<< HEAD
   gem 'pg', '1.2.3'
 =======
   gem 'pg' '1.2.3'
 >>>>>>> 34ebaeb... Use postgres on heroku and sqlite locally
+=======
+  gem 'pg', '1.2.3'
+>>>>>>> 34dc9c1... Popular and Collections
 end
 
 group :development, :test do
