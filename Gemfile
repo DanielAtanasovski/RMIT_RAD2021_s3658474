@@ -25,6 +25,8 @@ gem 'font-awesome-rails', '~> 4.7'
 gem 'bcrypt', '~> 3.1'
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.4.1'
+# aws
+gem 'aws-sdk', '~> 3'
 
 
 # REQUIRED FOR DEV (STANDARD TEMPLATE)
