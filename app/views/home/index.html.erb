@@ -16,9 +16,12 @@
 </header>
 
 <!--Popular-->
-<section class="col-md-12 text-center padding-bottom-s">
+<section class="col-md-12 padding-bottom-s">
   <div class="container shadow-lg">
-    <h2 class="font-weight-light">Most Popular Items</h2>
+    <div class="row">
+      <h2 class="col-xs-9 section-header">Popular</h2>
+      <a href="/collections/popular"><h2 class="col-xs-3">See All <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></h2></a>
+    </div>
     <div class="row padding-top-s">
       <div class="col-sm-4 col-xs-12">
         <div class="panel panel-primary shadow-lg">
@@ -45,18 +48,24 @@
 <hr>
 
 <!--Collections-->
-<section class="col-md-12 text-center padding-bottom-s">
+<section class="col-md-12 padding-bottom-s">
   <div class="container">
-    <h2 class="font-weight-light">Collections</h2>
+    <div class="row">
+      <h2 class="col-xs-9 section-header">Collections</h2>
+      <a href="/collections"><h2 class="col-xs-3">See All <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></h2></a>
+    </div>
 
     <div class"row">
       <!--Wide Panel-->
-      <a class="clear-text-color" href="#">
+      <a class="clear-text-color" href="/Collections/New">
         <div class="row padding-top-s">
           <div class="col-xs-12">
-              <div class="panel panel-default panel-size-m">
+              <div class="panel panel-default panel-size-m clear-panel">
                   <div class="panel-body">
-                    <h3>New</h3>
+                    <div class="panel-container">
+                      <img class="img-responsive" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/newItems.jpg">
+                      <h1 class="panel-text">New</h1>
+                    </div>
                   </div>
               </div>
           </div>
@@ -65,27 +74,42 @@
 
       <div class="row">
         <!--Short Panels -->
-        <div class="col-xs-6 panel-group">
-            <div class="panel panel-default panel-size-m">
-                <div class="panel-body">
-                  <h3>Men</h3>
-                </div>
-            </div>
 
-            <div class="panel panel-default panel-size-m">
+        <div class="col-xs-6 panel-group">
+          <a class="clear-text-color" href="/Collections/Men">
+            <div class="panel panel-default panel-size-m clear-panel">
                 <div class="panel-body">
-                  <h3>Women</h3>
+                    <div class="panel-container">
+                      <img class="img-responsive" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/Men.jpg">
+                      <h1 class="panel-text">Men</h1>
+                    </div>
                 </div>
             </div>
+          </a>
+          <a class="clear-text-color" href="/Collections/Women">
+            <div class="panel panel-default panel-size-m clear-panel">
+                <div class="panel-body">
+                    <div class="panel-container">
+                      <img class="img-responsive" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/Women.jpg">
+                      <h1 class="panel-text">Women</h1>
+                    </div>
+                </div>
+            </div>
+          </a>
         </div>
 
         <!--Long Panel-->
         <div class="col-xs-6">
-            <div class="panel panel-default panel-size-l">
+          <a class="clear-text-color" href="/Collections/Children">
+            <div class="panel panel-default panel-size-l clear-panel">
                 <div class="panel-body">
-                    <h3>Children</h3>
+                    <div class="panel-container">
+                      <img class="img-responsive" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/Children.jpg">
+                      <h1 class="panel-text">Children</h1>
+                    </div>
                 </div>
             </div>
+          </a>
         </div>
       </div>
 
@@ -100,6 +124,21 @@
 <section class="col-md-12 text-center">
   <div class="container text">
     <h2 class="font-weight-light">Newsletter</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat reprehenderit expedita.</p>
+    <p>Join the newsletter for the latest news on new lines and specials!</p>
+    <div class="row padding-bottom-m">
+      <div class="col-xs-12">
+        <div class="input-group input-group-lg">
+          <input type="email" class="form-control email-form" id="newsletterEmail" placeholder="john.smith@example.com">
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-default email-submit">Submit</button>
+          </span>
+        </div>
+      </div>
+      <!--<form class="form-inline">-->
+      <!--  <label for="newsletterEmail">Email Address</label>-->
+      <!--  <input type="email" class="form-control email-form" id="newsletterEmail" placeholder="john.smith@example.com">-->
+      <!--  <button type="submit" class="btn btn-default email-submit">Submit</button>-->
+      <!--</form>-->
+    </div>
   </div>
 </section>

@@ -25,6 +25,8 @@ gem 'font-awesome-rails', '~> 4.7'
 gem 'bcrypt', '~> 3.1'
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.4.1'
+# aws
+gem 'aws-sdk', '~> 3'
 
 
 # REQUIRED FOR DEV (STANDARD TEMPLATE)
@@ -32,7 +34,11 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :production do
+<<<<<<< HEAD
   gem 'pg', '1.2.3'
+=======
+  gem 'pg' '1.2.3'
+>>>>>>> 34ebaeb... Use postgres on heroku and sqlite locally
 end
 
 group :development, :test do
