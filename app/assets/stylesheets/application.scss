@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*"bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"*/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+
+// Pad body for navbar
+body { padding-top: 50px; }
+
+auto-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#navbar-toggle {
+  outline: none;
+  box-shadow: none;
+  border-color: none;
+}
+
+// Removes Dropdown within Dropdown scenario on smaller devices
+@media only screen and (max-width: 767px) {
+  .nav>li>a.dropdown-toggle {
+    display: none;
+  }
+  .nav .dropdown-menu {
+    display:block;
+        position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
