@@ -6,8 +6,6 @@ ruby '2.7.3'
 #  Gems used in app
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.5'
-# Bootstrap
-gem 'bootstrap-sass', '~> 3.4.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -25,6 +23,8 @@ gem 'carrierwave', '~> 2.2'
 gem 'mini_magick', '~> 4.11'
 gem 'font-awesome-rails', '~> 4.7'
 gem 'bcrypt', '~> 3.1'
+# Bootstrap
+gem 'bootstrap-sass', '~> 3.4.1'
 
 
 # REQUIRED FOR DEV (STANDARD TEMPLATE)
@@ -32,7 +32,7 @@ gem 'bcrypt', '~> 3.1'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :production do
-  gem 'pg' '1.2.3'
+  gem 'pg', '1.2.3'
 end
 
 group :development, :test do
