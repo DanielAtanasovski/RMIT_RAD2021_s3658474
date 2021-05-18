@@ -26,10 +26,15 @@ gem 'bcrypt', '~> 3.1'
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.4.1'
 <<<<<<< HEAD
+<<<<<<< HEAD
 # aws
 gem 'aws-sdk', '~> 3'
 =======
 >>>>>>> 34dc9c1... Popular and Collections
+=======
+# aws
+gem 'aws-sdk', '~> 3'
+>>>>>>> 25cbd37... Finally finished frontend to acceptability
 
 
 # REQUIRED FOR DEV (STANDARD TEMPLATE)
