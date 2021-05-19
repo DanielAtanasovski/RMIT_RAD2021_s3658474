@@ -1,16 +1,17 @@
 <header class="top-image">
-  <div class="text-block">
-    <div class="col-md-12">
-      <h3>
-        Winter Vibes &nbsp;&nbsp;
-        <button type="button" class="btn btn-default auto-center rounded-circle">
+  <div class="container">
+    <div class="text-center padding-top-s">
+      <h3><%=@random_header.name %>
+        <button type="button" class="btn btn-default">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </h3>
-
-      <p>Cold & Brilliant Start
-      </p>
-      <p>$29.99</p>
+      <div class="panel panel-primary header-img">
+        <div class="panel-body">
+          <img class="img-responsive" src="<%=@random_header.images[0].url %>">
+        </div>
+      </div>
+      <h3><%=@random_header.price %></h3>
     </div>
   </div>
 </header>
@@ -23,22 +24,48 @@
       <a href="/collections/popular"><h2 class="col-xs-3">See All <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></h2></a>
     </div>
     <div class="row padding-top-s">
-      <div class="col-sm-4 col-xs-12">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
         <div class="panel panel-primary shadow-lg">
-          <div class="panel-body">Image1 Goes Here</div>
-          <div class="panel-footer">Infomation Goes Here</div>
+          <div class="panel-body">
+            <img class="img-responsive" src="<%= @popular_items[0].images[0].url %>" />
+          </div>
+          <div class="panel-footer">
+            <p><%= @popular_items[0].name %></p>
+            <p>
+              <%= @popular_items[0].price %>
+              <button type="button" class="btn btn-default pull-right">
+               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button>
+            </p>
+            </div>
         </div>
       </div>
-      <div class="col-sm-4 col-xs-12 shadow-sm">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
         <div class="panel panel-primary shadow-lg">
-          <div class="panel-body">Image2 Goes Here</div>
-          <div class="panel-footer">Infomation Goes Here</div>
+          <img class="img-responsive" src="<%= @popular_items[1].images[0].url %>" />
+          <div class="panel-footer">
+            <p><%= @popular_items[1].name %></p>
+            <p>
+              <%= @popular_items[1].price %>
+              <button type="button" class="btn btn-default pull-right">
+               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button>
+            </p>
+          </div>
         </div>
       </div>
-      <div class="col-sm-4 col-xs-12">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
         <div class="panel panel-primary shadow-sm">
-          <div class="panel-body">Image3 Goes Here</div>
-          <div class="panel-footer">Infomation Goes Here</div>
+          <img class="img-responsive" src="<%= @popular_items[2].images[0].url %>" />
+          <div class="panel-footer">
+            <p><%= @popular_items[2].name %></p>
+            <p>
+              <%= @popular_items[2].price %>
+              <button type="button" class="btn btn-default pull-right">
+               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button>
+            </p>
+            </div>
         </div>
       </div>
     </div>
@@ -63,7 +90,7 @@
               <div class="panel panel-default panel-size-m clear-panel">
                   <div class="panel-body">
                     <div class="panel-container">
-                      <img class="img-responsive" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/newItems.jpg">
+                      <img class="img-responsive filter-img" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/newItems.jpg">
                       <h1 class="panel-text">New</h1>
                     </div>
                   </div>
@@ -75,12 +102,12 @@
       <div class="row">
         <!--Short Panels -->
 
-        <div class="col-xs-6 panel-group">
+        <div class="col-md-6 col-xs-12 panel-group">
           <a class="clear-text-color" href="/Collections/Men">
             <div class="panel panel-default panel-size-m clear-panel">
                 <div class="panel-body">
                     <div class="panel-container">
-                      <img class="img-responsive" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/Men.jpg">
+                      <img class="img-responsive filter-img" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/Men.jpg">
                       <h1 class="panel-text">Men</h1>
                     </div>
                 </div>
@@ -90,7 +117,7 @@
             <div class="panel panel-default panel-size-m clear-panel">
                 <div class="panel-body">
                     <div class="panel-container">
-                      <img class="img-responsive" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/Women.jpg">
+                      <img class="img-responsive filter-img" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/Women.jpg">
                       <h1 class="panel-text">Women</h1>
                     </div>
                 </div>
@@ -99,12 +126,12 @@
         </div>
 
         <!--Long Panel-->
-        <div class="col-xs-6">
+        <div class="col-md-6 col-xs-12">
           <a class="clear-text-color" href="/Collections/Children">
             <div class="panel panel-default panel-size-l clear-panel">
                 <div class="panel-body">
                     <div class="panel-container">
-                      <img class="img-responsive" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/Children.jpg">
+                      <img class="img-responsive filter-img" src="https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/Index/Children.jpg">
                       <h1 class="panel-text">Children</h1>
                     </div>
                 </div>
