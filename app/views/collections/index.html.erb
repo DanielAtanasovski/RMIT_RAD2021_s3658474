@@ -1,0 +1,44 @@
+<section>
+  <div class="container">
+    <div class="row padding-top-s">
+      <h1>Collections</h1>
+    </div>
+    <div class="row padding-top-s padding-bottom-s text-center">
+      <!--Filters and Choices go here-->
+      <div class="col-xs-6">
+        <select onchange="changeCollection()" id="select-collections" class="form-control" value="<%= @collection_value %>">
+          <option value=0 <% if @collection_value == 0 %> selected <% end %> >All</option>
+          <option value=1 <% if @collection_value == 1 %> selected <% end %>>Men</option>
+          <option value=2 <% if @collection_value == 2 %> selected <% end %>>Women</option>
+          <option value=3 <% if @collection_value == 3 %> selected <% end %>>Children</option>
+          <option value=4 <% if @collection_value == 4 %> selected <% end %>>New</option>
+        </select>
+      </div>
+      <div class="col-xs-6">
+        Filter
+      </div>
+    </div>
+
+    <div class="row padding-top-s padding-bottom-s region-border">
+      <% @collections.each do |collection| %>
+        <% collection.items.each do |item| %>
+
+          <div class="col-md-3">
+            <div class="panel panel-primary shadow-sm">
+              <img class="img-responsive" src="<%= item.images[0].url %>" />
+              <div class="panel-footer">
+                <p><%= item.name %></p>
+                <p>
+                  <%= item.price %>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</section>
+

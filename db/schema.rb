@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_19_132253) do
+ActiveRecord::Schema.define(version: 2021_05_20_082312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "collections", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "collections_items", force: :cascade do |t|
+    t.integer "collection_id", null: false
+    t.integer "item_id", null: false
+    t.index ["collection_id", "item_id"], name: "index_collections_items_on_collection_id_and_item_id", unique: true
+  end
 
   create_table "images", force: :cascade do |t|
     t.string "url"
@@ -23,6 +35,7 @@ ActiveRecord::Schema.define(version: 2021_05_19_132253) do
   end
 
   create_table "items", force: :cascade do |t|
+    t.integer "collection_id"
     t.string "name"
     t.decimal "price"
     t.integer "popularity"
