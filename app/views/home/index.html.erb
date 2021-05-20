@@ -1,10 +1,20 @@
 <header class="top-image">
   <div class="container">
     <div class="text-center padding-top-s">
-      <h3><%=@random_header.name %>
-        <button type="button" class="btn btn-default">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        </button>
+      <h3>
+        <%=@random_header.name %>
+
+        <!--Check if already saved-->
+        <% if @saved_list_cookies_array.include?(@random_header.id) %>
+          <%= link_to "javascript:removeFromCookies(#{@random_header.id})", class: 'btn btn-default' do %>
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+          <% end %>
+        <% else %>
+          <%= link_to "javascript:addToCookies(#{@random_header.id})", class: 'btn btn-default' do %>
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          <% end %>
+        <% end %>
+
       </h3>
       <div class="panel panel-primary header-img">
         <div class="panel-body">
@@ -33,9 +43,18 @@
             <p><%= @popular_items[0].name %></p>
             <p>
               <%= @popular_items[0].price %>
-              <button type="button" class="btn btn-default pull-right">
-               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-              </button>
+
+              <!--Check if already saved-->
+              <% if @saved_list_cookies_array.include?(@popular_items[0].id) %>
+                <%= link_to "javascript:removeFromCookies(#{@popular_items[0].id})", class: 'btn btn-default pull-right' do %>
+                  <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                <% end %>
+              <% else %>
+                <%= link_to "javascript:addToCookies(#{@popular_items[0].id})", class: 'btn btn-default pull-right' do %>
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <% end %>
+              <% end %>
+
             </p>
             </div>
         </div>
@@ -47,9 +66,18 @@
             <p><%= @popular_items[1].name %></p>
             <p>
               <%= @popular_items[1].price %>
-              <button type="button" class="btn btn-default pull-right">
-               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-              </button>
+
+              <!--Check if already saved-->
+              <% if @saved_list_cookies_array.include?(@popular_items[1].id) %>
+                <%= link_to "javascript:removeFromCookies(#{@popular_items[1].id})", class: 'btn btn-default pull-right' do %>
+                  <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                <% end %>
+              <% else %>
+                <%= link_to "javascript:addToCookies(#{@popular_items[1].id})", class: 'btn btn-default pull-right' do %>
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <% end %>
+              <% end %>
+
             </p>
           </div>
         </div>
@@ -61,11 +89,18 @@
             <p><%= @popular_items[2].name %></p>
             <p>
               <%= @popular_items[2].price %>
-              <button type="button" class="btn btn-default pull-right">
-               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-              </button>
+              <!--Check if already saved-->
+              <% if @saved_list_cookies_array.include?(@popular_items[2].id) %>
+                <%= link_to "javascript:removeFromCookies(#{@popular_items[2].id})", class: 'btn btn-default pull-right' do %>
+                  <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                <% end %>
+              <% else %>
+                <%= link_to "javascript:addToCookies(#{@popular_items[2].id})", class: 'btn btn-default pull-right' do %>
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <% end %>
+              <% end %>
             </p>
-            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -146,6 +181,46 @@
 </section>
 
 <hr>
+
+<!--Saved List-->
+<% if (@saved_list_cookies && JSON.parse(@saved_list_cookies).length > 0) %>
+  <section class="col-md-12">
+    <div class="container">
+
+      <div class="row padding-bottom-s">
+        <h2 class="col-xs-9 section-header">Saved List</h2>
+      </div>
+        <!--Items-->
+      <div class="row">
+        <% JSON.parse(@saved_list_cookies).each do |saved_item| %>
+        <% @saved_item_record = Item.find(saved_item) %>
+        <div class="col-md-3">
+          <div class="panel panel-primary shadow-sm">
+            <img class="img-responsive" src="<%= @saved_item_record.images[0].url %>" />
+            <div class="panel-footer">
+              <p><%= @saved_item_record.name %></p>
+              <p>
+                <%= @saved_item_record.price %>
+                <!--Check if already saved-->
+                <% if @saved_list_cookies_array.include?(@saved_item_record.id) %>
+                  <%= link_to "javascript:removeFromCookies(#{@saved_item_record.id})", class: 'btn btn-default pull-right' do %>
+                    <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                  <% end %>
+                <% else %>
+                  <%= link_to "javascript:addToCookies(#{@saved_item_record.id})", class: 'btn btn-default pull-right' do %>
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                  <% end %>
+                <% end %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+    </div>
+  </section>
+<% end %>
 
 <!--Newsletter-->
 <section class="col-md-12 text-center">
