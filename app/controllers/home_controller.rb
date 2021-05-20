@@ -8,4 +8,10 @@ class HomeController < ApplicationController
     @saved_list_cookies_array = JSON.parse(@saved_list_cookies)
 
   end
+
+  def email
+    @email = params[:email]
+    NewsletterMailer.with(email: @email).newsletter_email.deliver_later
+    request.referrer
+  end
 end

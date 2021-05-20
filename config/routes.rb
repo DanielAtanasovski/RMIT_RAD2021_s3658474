@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   get '/' => 'home#index'
   get 'home' => 'home#index'
+  post '/' => 'home#email'
 end
