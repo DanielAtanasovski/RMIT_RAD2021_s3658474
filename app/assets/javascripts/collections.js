@@ -1,5 +1,6 @@
 function changeCollection() {
   var collection_value = document.getElementById("select-collections").value;
+  document.location.pathname = '/collections';
   document.location.href = URL_add_parameter(document.location.href, 'collection', collection_value);
 }
 

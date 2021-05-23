@@ -1,0 +1,2 @@
+module UserPromptHelper
+end

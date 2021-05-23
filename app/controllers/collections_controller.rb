@@ -27,7 +27,11 @@ class CollectionsController < ApplicationController
       @collections = Collection.where(name: "New")
     end
 
+  end
 
+  def popular
+    @collections = Collection.all
+    render 'index'
   end
 
 end

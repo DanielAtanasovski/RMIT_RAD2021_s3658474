@@ -25,8 +25,12 @@ gem 'font-awesome-rails', '~> 4.7'
 gem 'bcrypt', '~> 3.1'
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.4.1'
-# aws
-gem 'aws-sdk', '~> 3'
+# Omniauth - necessary for twitter login
+gem 'omniauth', '~> 1'
+gem 'omniauth-twitter'
+# gem 'omniauth-rails_csrf_protection'
+# Login
+gem 'devise'
 
 # REQUIRED FOR DEV (STANDARD TEMPLATE)
 # Reduces boot times through caching; required in config/boot.rb

@@ -16,3 +16,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function onSignupBack() {
+
+}
+
+function onLogin() {
+
+}
