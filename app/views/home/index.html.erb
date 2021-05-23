@@ -5,7 +5,7 @@
         <%=@random_header.name %>
 
         <!--Check if already saved-->
-        <% if @saved_list_cookies_array.include?(@random_header.id) %>
+        <% if @saved_list_cookies_array != nil && @saved_list_cookies_array.include?(@random_header.id) %>
           <%= link_to "javascript:removeFromCookies(#{@random_header.id})", class: 'btn btn-default' do %>
             <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
           <% end %>
@@ -45,7 +45,7 @@
               <%= @popular_items[0].price %>
 
               <!--Check if already saved-->
-              <% if @saved_list_cookies_array.include?(@popular_items[0].id) %>
+              <% if @saved_list_cookies_array && @saved_list_cookies_array.include?(@popular_items[0].id) %>
                 <%= link_to "javascript:removeFromCookies(#{@popular_items[0].id})", class: 'btn btn-default pull-right' do %>
                   <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                 <% end %>
@@ -68,7 +68,7 @@
               <%= @popular_items[1].price %>
 
               <!--Check if already saved-->
-              <% if @saved_list_cookies_array.include?(@popular_items[1].id) %>
+              <% if @saved_list_cookies_array && @saved_list_cookies_array.include?(@popular_items[1].id) %>
                 <%= link_to "javascript:removeFromCookies(#{@popular_items[1].id})", class: 'btn btn-default pull-right' do %>
                   <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                 <% end %>
@@ -90,7 +90,7 @@
             <p>
               <%= @popular_items[2].price %>
               <!--Check if already saved-->
-              <% if @saved_list_cookies_array.include?(@popular_items[2].id) %>
+              <% if @saved_list_cookies_array && @saved_list_cookies_array.include?(@popular_items[2].id) %>
                 <%= link_to "javascript:removeFromCookies(#{@popular_items[2].id})", class: 'btn btn-default pull-right' do %>
                   <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                 <% end %>
@@ -202,7 +202,7 @@
               <p>
                 <%= @saved_item_record.price %>
                 <!--Check if already saved-->
-                <% if @saved_list_cookies_array.include?(@saved_item_record.id) %>
+                <% if @saved_list_cookies_array && @saved_list_cookies_array.include?(@saved_item_record.id) %>
                   <%= link_to "javascript:removeFromCookies(#{@saved_item_record.id})", class: 'btn btn-default pull-right' do %>
                     <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
                   <% end %>
