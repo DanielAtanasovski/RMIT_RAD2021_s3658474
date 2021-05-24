@@ -10,13 +10,17 @@
   <!--Buttons-->
   <div class="container">
     <div class="col-md-12 text-center paddings">
-      <button type="button" class="btn btn-block">Login</button>
+      <div class="btn btn-block btn-warning clear-colour">
+        <%= link_to 'Login', new_user_session_path, :class => "btn" %>
+      </div>
     </div>
     <div class="col-md-12 text-center paddings">
-      <%= link_to "Connect Twitter", "/auth/twitter", method: :post, class: "btn btn-block" %>
+      <div class="btn btn-block btn-info clear-colour">
+        <%= link_to "Connect Twitter", "/auth/twitter", method: :post, :class => "btn" %>
+      </div>
     </div>
     <div class="col-md-12 text-center">
-      <a href="/sign_up"><p>New to us? Sign Up!</p></a>
+      <%= link_to 'New to us? Sign Up!', new_user_registration_path %>
     </div>
   </div>
 

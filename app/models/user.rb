@@ -2,7 +2,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :authentication_keys => [:username]
+  has_one :bag
 
   def self.find_or_create_from_auth_hash(auth_hash)
     user = where(provider: auth_hash.provider, uid: auth_hash.uid).first_or_create

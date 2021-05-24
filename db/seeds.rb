@@ -25,3 +25,10 @@ grey_children_shirt.images.create!(url: 'https://rad2021-justanotheronlinestore-
 grey_children_shirt.images.create!(url: 'https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/items/children-grey-sweater-2.jpg')
 grey_children_shirt.images.create!(url: 'https://rad2021-justanotheronlinestore-images.s3.amazonaws.com/items/children-grey-sweater-3.jpg')
 
+
+user = User.new
+user.email = 'rad2021rmit@gmail.com'
+user.password = 'Rails2021'
+user.password_confirmation = 'Rails2021'
+user.username = 'RAD'
+user.save!
