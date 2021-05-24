@@ -12,7 +12,7 @@ Heroku:
 https://ruby-rad-assignment-daniel.herokuapp.com/
 
 Heroku last log:
-'''
+```
 -----> Building on the Heroku-20 stack
 -----> Using buildpack: heroku/ruby
 -----> Ruby app detected
@@ -130,7 +130,7 @@ Heroku last log:
 -----> Launching...
        Released v29
        https://ruby-rad-assignment-daniel.herokuapp.com/ deployed to Heroku
-'''
+```
 
 Repository location:
 https://github.com/DanielAtanasovski/RAD2021_s3658474
