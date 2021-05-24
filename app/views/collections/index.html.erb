@@ -21,6 +21,7 @@
 
     <div class="row padding-top-s padding-bottom-s region-border">
       <% @collections.each do |collection| %>
+        <% if (@collection_value == -1) then collection.items.order(popularity: :desc) end%>
         <% collection.items.each do |item| %>
 
           <div class="col-md-3">
@@ -41,4 +42,3 @@
   </div>
 
 </section>
-

@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'bag' => 'bag#index'
   get 'help' => 'help#index'
   get 'collections' => 'collections#index'
-  get 'collections/popular' => 'collections#popular'
 
   get '/' => 'home#index'
   get 'home' => 'home#index'

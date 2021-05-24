@@ -10,6 +10,8 @@ class CollectionsController < ApplicationController
     end
 
     case @collection_value
+    when -1
+      @collections = Collection.all
     # All
     when 0
       @collections = Collection.all
